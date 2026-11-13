@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 5.1 — Our Little Universe</title>
+  <meta name="description" content="Website resmi Class 5.1. One Class, One Story, Endless Memories. 20 santriwati + wali kelas.">
+  <meta name="theme-color" content="#A8D5E5">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Class 5.1 — Our Little Universe">
+  <meta property="og:description" content="One Class, One Story, Endless Memories 🩵">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://via.placeholder.com/1200x630/A8D5E5/1B3A4B?text=Class+5.1">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩵</text></svg>">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen">
+    <div class="loader"></div>
+    <div class="loading-text">Class 5.1 ✨</div>
+  </div>
+
+  <!-- Enter Overlay (for music / first visit) -->
+  <div id="enter-overlay">
+    <h1 style="color:white;font-size:clamp(1.8rem,5vw,2.8rem);margin-bottom:0.5rem;text-align:center">Welcome to</h1>
+    <h2 style="color:var(--baby-blue);font-size:clamp(2rem,6vw,3.5rem);margin-bottom:1.5rem;text-align:center">Class 5.1</h2>
+    <p style="color:rgba(255,255,255,0.85);margin-bottom:2rem;text-align:center;max-width:320px">Our Little Universe · Est. 2026</p>
+    <button class="enter-btn" id="enter-btn">ENTER CLASS 5.1 🎵</button>
+    <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:1.5rem">Klik untuk masuk & putar musik</p>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo" data-section="home">🩵 <span>5.1</span></a>
+      <ul class="nav-links">
+        <li><a href="#" data-section="home" class="active">Home</a></li>
+        <li><a href="#" data-section="members">Members</a></li>
+        <li><a href="#" data-section="schedule">Jadwal</a></li>
+        <li><a href="#" data-section="cleaning">Piket</a></li>
+        <li><a href="#" data-section="memories">Memories</a></li>
+        <li><a href="#" data-section="fun">Fun Zone</a></li>
+        <li><a href="#" data-section="community">Community</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <!-- Bottom Nav (Mobile) -->
+  <nav class="bottom-nav">
+    <a href="#" data-section="home" class="active"><span class="icon">🏠</span>Home</a>
+    <a href="#" data-section="members"><span class="icon">👥</span>Members</a>
+    <a href="#" data-section="schedule"><span class="icon">📅</span>Jadwal</a>
+    <a href="#" data-section="cleaning"><span class="icon">🧹</span>Piket</a>
+    <a href="#" data-section="fun"><span class="icon">🎮</span>Fun</a>
+  </nav>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="active">
+      <div class="hero">
+        <div class="greeting" id="greeting">Hello, Class 5.1! 🩵</div>
+        <div class="hero-badge">OUR LITTLE UNIVERSE · EST. 2026</div>
+        <h1>Welcome to Class 5.1</h1>
+        <p class="slogan">One Class, One Story, Endless Memories</p>
+        
+        <div class="quote-box">
+          <p id="class-quote">"Loading quote..."</p>
+        </div>
+
+        <div class="hero-cards">
+          <div class="hero-card">
+            <div class="icon">🕐</div>
+            <h3>Live Clock</h3>
+            <p class="live-clock" id="live-clock">--:--:--</p>
+            <p id="live-date" style="font-size:0.85rem;margin-top:0.3rem"></p>
+          </div>
+          <div class="hero-card">
+            <div class="icon">⏳</div>
+            <h3>Class Countdown</h3>
+            <p class="countdown" id="countdown">Loading...</p>
+          </div>
+          <div class="hero-card">
+            <div class="icon">📢</div>
+            <h3>Mini Announcement</h3>
+            <p>Website resmi Class 5.1 sudah live! Jelajahi ya 🩵</p>
+          </div>
+        </div>
+
+        <a href="#" class="cta-btn" data-section="members">Explore Our Class →</a>
+        <button class="cta-btn" id="surprise-btn" style="background:var(--baby-blue-dark);margin-left:0.5rem">🎲 Surprise Me</button>
+      </div>
+
+      <!-- Wali Kelas -->
+      <div id="wali-section"></div>
+
+      <!-- Quick Announcements -->
+      <div class="section-header">
+        <h2>📢 Pengumuman Terbaru</h2>
+      </div>
+      <div id="announcements-list" class="messages-list"></div>
+    </section>
+
+    <!-- MEMBERS -->
+    <section id="members">
+      <div class="section-header">
+        <h2>👥 Our Members</h2>
+        <p>20 santriwati Class 5.1 — kenali lebih dekat</p>
+      </div>
+
+      <div class="search-filter">
+        <div class="search-box">
+          <input type="text" id="search-member" placeholder="Cari nama atau panggilan...">
+        </div>
+        <select class="filter-select" id="filter-absen">
+          <option value="">Semua Absen</option>
+        </select>
+      </div>
+
+      <div class="members-grid" id="members-grid">
+        <!-- filled by JS -->
+      </div>
+    </section>
+
+    <!-- SCHEDULE (Jadwal Pelajaran) -->
+    <section id="schedule">
+      <div class="section-header">
+        <h2>📚 Jadwal Pelajaran</h2>
+        <p>Senin – Jumat · Class 5.1</p>
+      </div>
+      <div class="schedule-grid" id="lesson-grid"></div>
+    </section>
+
+    <!-- CLEANING (Jadwal Piket) -->
+    <section id="cleaning">
+      <div class="section-header">
+        <h2>🧹 Jadwal Piket Kelas</h2>
+        <p>Class Cleaning Schedule · Jaga kebersihan bersama</p>
+      </div>
+      <div class="schedule-grid" id="cleaning-grid"></div>
+      <p style="text-align:center;margin-top:1.5rem;color:var(--navy-light);font-size:0.9rem">
+        ✨ Jangan lupa bawa semangat dan senyuman saat piket!
+      </p>
+    </section>
+
+    <!-- MEMORIES -->
+    <section id="memories">
+      <div class="section-header">
+        <h2>📸 Class Memories</h2>
+        <p>Kenangan indah kita bersama</p>
+      </div>
+      <div class="fun-grid">
+        <div class="fun-card">
+          <div class="icon">🌅</div>
+          <h3>Our First Day</h3>
+          <p>Hari pertama yang penuh harapan</p>
+        </div>
+        <div class="fun-card">
+          <div class="icon">🎨</div>
+          <h3>Class Activities</h3>
+          <p>Kegiatan seru di dalam & luar kelas</p>
+        </div>
+        <div class="fun-card">
+          <div class="icon">😂</div>
+          <h3>Random Moments</h3>
+          <p>Momen spontan yang jadi kenangan</p>
+        </div>
+        <div class="fun-card">
+          <div class="icon">🎉</div>
+          <h3>Special Events</h3>
+          <p>Acara-acara spesial kelas</p>
+        </div>
+        <div class="fun-card">
+          <div class="icon">🎬</div>
+          <h3>Behind The Scenes</h3>
+          <p>Yang tidak terlihat di kamera</p>
+        </div>
+        <div class="fun-card">
+          <div class="icon">📷</div>
+          <h3>Photo of The Month</h3>
+          <p>Foto favorit bulan ini</p>
+        </div>
+        <div class="fun-card">
+          <div class="icon">🎞️</div>
+          <h3>Video Memories</h3>
+          <p>Cuplikan video kenangan</p>
+        </div>
+        <div class="fun-card">
+          <div class="icon">🖼️</div>
+          <h3>Polaroid Gallery</h3>
+          <p>Galeri gaya polaroid</p>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:2rem;color:var(--navy-light)">
+        (Fitur galeri foto & video dapat ditambahkan dengan upload ke folder assets atau Google Drive embed)
+      </p>
+    </section>
+
+    <!-- FUN ZONE -->
+    <section id="fun">
+      <div class="section-header">
+        <h2>🎮 Fun Zone</h2>
+        <p>Zona interaktif Class 5.1</p>
+      </div>
+      <div class="fun-grid">
+        <div class="fun-card" onclick="alert('Fitur Who Am I? segera hadir! Coba tebak dari fun fact di profil ya 😊')">
+          <div class="icon">❓</div>
+          <h3>Who Am I?</h3>
+          <p>Tebak nama teman dari petunjuk</p>
+        </div>
+        <div class="fun-card" onclick="alert('Class Bingo board segera hadir!')">
+          <div class="icon">🎯</div>
+          <h3>Class Bingo</h3>
+          <p>Bingo kebiasaan lucu di kelas</p>
+        </div>
+        <div class="fun-card" onclick="alert('Mood board segera hadir! Pilih emoji suasana hatimu hari ini.')">
+          <div class="icon">😊</div>
+          <h3>Mood of The Class</h3>
+          <p>Bagikan suasana hati hari ini</p>
+        </div>
+        <div class="fun-card">
+          <div class="icon">🎂</div>
+          <h3>Birthday Corner</h3>
+          <p>Daftar ulang tahun anggota</p>
+        </div>
+        <div class="fun-card" onclick="alert('Jar of Memories — kumpulan pesan spesial segera hadir!')">
+          <div class="icon">🫙</div>
+          <h3>Jar of Memories</h3>
+          <p>Buka kenangan satu per satu</p>
+        </div>
+        <div class="fun-card" onclick="alert('Spin the Wheel & games lain segera hadir!')">
+          <div class="icon">🎡</div>
+          <h3>Spin The Wheel</h3>
+          <p>Putar & dapat kejutan</p>
+        </div>
+      </div>
+
+      <div class="section-header" style="margin-top:3rem">
+        <h2>🎂 Birthday Corner</h2>
+      </div>
+      <div class="birthday-list" id="birthday-list"></div>
+    </section>
+
+    <!-- COMMUNITY -->
+    <section id="community">
+      <div class="section-header">
+        <h2>💬 Digital Guestbook</h2>
+        <p>Tinggalkan pesan, ucapan, atau kenangan untuk teman sekelas</p>
+      </div>
+
+      <form class="guestbook-form" id="guestbook-form">
+        <input type="text" id="gb-name" placeholder="Namamu..." required maxlength="40">
+        <textarea id="gb-message" placeholder="Tulis pesan atau kenanganmu di sini..." rows="3" required maxlength="300"></textarea>
+        <button type="submit" class="cta-btn" style="width:100%;justify-content:center">Kirim Pesan 💌</button>
+      </form>
+
+      <div class="messages-list" id="messages-list"></div>
+
+      <div class="section-header" style="margin-top:3rem">
+        <h2>🌟 19 Things About Us</h2>
+        <p>Fakta unik tentang Class 5.1</p>
+      </div>
+      <div class="hero-cards">
+        <div class="hero-card"><h3>1</h3><p>Kami punya 20 jiwa yang penuh warna</p></div>
+        <div class="hero-card"><h3>2</h3><p>Suka warna baby blue, putih & navy</p></div>
+        <div class="hero-card"><h3>3</h3><p>Wali kelas kami suka kuning ☀️</p></div>
+        <div class="hero-card"><h3>4</h3><p>Setiap orang punya nickname unik</p></div>
+        <div class="hero-card"><h3>5</h3><p>Banyak yang jago desain & kreatif</p></div>
+        <div class="hero-card"><h3>6</h3><p>Piket dijalankan dengan semangat</p></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Music Player -->
+  <div class="music-player">
+    <div class="now-playing">Now Playing: Kita — Sheila On 7</div>
+    <div class="player-controls">
+      <button class="player-btn" id="play-btn" title="Play/Pause">▶️</button>
+      <button class="player-btn" id="mute-btn" title="Mute">🔊</button>
+    </div>
+  </div>
+
+  <!-- Hidden Audio (replace src with legal URL if available) -->
+  <!-- Official track is copyrighted. Use YouTube or obtain license. -->
+  <!-- For demo/educational purposes, play button can open official YouTube. -->
+  <audio id="bg-music" loop preload="none">
+    <!-- <source src="assets/kita.mp3" type="audio/mpeg"> -->
+    <!-- User should replace with a legally obtained audio file -->
+  </audio>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close">×</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
